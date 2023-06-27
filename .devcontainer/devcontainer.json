@@ -1,0 +1,14 @@
+{
+  "image": "ubuntu:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/common-utils": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.python"
+      ]
+    }
+  }
+}

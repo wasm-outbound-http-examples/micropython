@@ -1,0 +1,15 @@
+diff --git a/package.json b/package.json
+index d6c1d90..63a18f3 100644
+--- a/package.json
++++ b/package.json
+@@ -29,5 +29,10 @@
+     "arraybuffer-loader": "^1.0.7",
+     "node-fetch": "^2.6.0",
+     "raw-loader": "^2.0.0"
++  },
++  "browser": {
++    "fs": false,
++    "path": false,
++    "os": false
+   }
+ }

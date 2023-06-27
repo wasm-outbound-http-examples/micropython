@@ -1,0 +1,12 @@
+diff --git a/index-patched.js b/index-patched.js
+index 9a3b5c6..40754fc 100644
+--- a/index-patched.js
++++ b/index-patched.js
+@@ -1,6 +1,7 @@
+ global.mpjscache = {};
+ let pyjs;
+ const browser = (typeof window || typeof importScripts) !== 'undefined';
++if (browser && typeof webpackJsonp !== 'object') { global.webpackJsonp = new Array(); } // Emulate some old Webpack for in-browser use
+ let stdout_text = '';
+ let stdout_ready = false;
+ let stdout_print = (stdout) => {

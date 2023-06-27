@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTTP request for Micropython</title>
+  <script type="text/javascript" defer src="dist/main.js"></script>
+</head>
+<body>
+<h2>HTTP Request from inside WASM implemented in Micropython</h2>
+
+<p>This example uses binary build from <a href="https://github.com/rafi16jan/micropython-wasm">micropython-wasm</a>.</p>
+<p>See the output in browser developer console.</p>
+
+<p>Actual code:</p>
+<pre>
+import js
+
+fetch = JS('fetch')
+
+response = fetch('https://httpbin.org/anything').wait()
+text = response.text().wait()
+print(text)
+</pre>
+<footer><small>Created for (wannabe-awesome) <a href="https://github.com/vasilev/HTTP-request-from-inside-WASM">list</a></small></footer>
+</body>
+</html>
